@@ -10,4 +10,4 @@ RUN apt-get update && \
 RUN pip install shadowsocks==2.8.2
 
 # Configure container to run as an executable
-ENTRYPOINT ["/usr/local/bin/ssserver"]
+ENTRYPOINT ["/usr/local/bin/ssserver -p 1988 -k password -m aes-256-cfb --user nobody -d start"]
